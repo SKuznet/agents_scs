@@ -1,0 +1,55 @@
+### Build output ###
+target/
+build/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### AgentHub runtime data (H2 database files and bare repositories) ###
+data/
+*.mv.db
+*.trace.db
+
+### Logs ###
+*.log
+logs/
+
+### Local environment and secrets ###
+.env
+.env.*
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Kotlin ###
+.kotlin
+
+### OS ###
+.DS_Store
+Thumbs.db
+desktop.ini

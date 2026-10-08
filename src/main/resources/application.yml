@@ -1,0 +1,29 @@
+agenthub:
+  # HS256 secret that signs agent JWS tokens; at least 32 bytes.
+  jws-secret: ${AGENTHUB_JWS_SECRET}
+  storage-root: ./data/repos
+
+spring:
+  jackson:
+    mapper:
+      accept-case-insensitive-enums: true
+  datasource:
+    url: jdbc:h2:file:./data/agenthub
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
